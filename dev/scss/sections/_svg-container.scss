@@ -1,0 +1,25 @@
+/* =============
+    SVG Container
+============= */
+
+#svg-container{
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-template-areas: ". svg-container .";
+
+    @include lg{
+        grid-template-columns:  auto 700px auto;
+    }
+
+    @include xl{
+        grid-template-columns:  auto 700px auto;
+    }
+
+    >div{
+        grid-area: svg-container;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+}
