@@ -100,7 +100,7 @@ gsap.set(["#symbol"], {scale:0, transformOrigin:"center center"});
       },
       ease:"power1.out"
     })
-    .to("#symbol", {scale:1, duration:1})
+    .to("#symbol", {scale:1, duration:1}, "-=1")
     ;
 
     return tl;
@@ -112,7 +112,7 @@ gsap.set(["#symbol"], {scale:0, transformOrigin:"center center"});
       duration:5,
       motionPath:{
         path:"#flightPath-02",
-        align:"#flightPath-02           ",
+        align:"#flightPath-02",
         alignOrigin:[0.5, 0.5],
         autoRotate:180
       },
@@ -127,6 +127,9 @@ gsap.set(["#symbol"], {scale:0, transformOrigin:"center center"});
   function bigSymbolTL(){
     let tl = gsap.timeline();
 
+    tl.to("#symbol", {duration:5, scale:4, x:400, y:400})
+
+    ;
 
     return tl;
   }
@@ -151,7 +154,7 @@ gsap.set(["#symbol"], {scale:0, transformOrigin:"center center"});
   //3. BUILD Main timeline
 //  mainTL.add(fadeInTL())
 mainTL.add(starsTL())
-      .add(serenityTL())
+      .add(serenityTL(), "-=1")
       .add(asteroidsTL())
       .add(asteroidDodgeTL())
       .add(flightTL())
