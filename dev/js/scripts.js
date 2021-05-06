@@ -35,16 +35,17 @@ ready(() => {
 
   function init(){
     //***********  starsTL init ****************
-gsap.set([".star-01", ".star-02", ".star-03", ".star-04", ".star-05", ".star-06", ".star-07", ".star-08"], {alpha:0, borderRadius:"100%", rotation:"180deg", transformOrigin:"center center", scale:.25});
+  gsap.set([".star-01", ".star-02", ".star-03", ".star-04", ".star-05", ".star-06", ".star-07", ".star-08"], {alpha:0, borderRadius:"100%", rotation:"180deg", transformOrigin:"center center", scale:.25});
     //*********** serenityTL init ****************
-gsap.set(["#serenity"], {display:"none", scale:0, transformOrigin:"center center"});
+  gsap.set(["#serenity"], {display:"none", scale:0, transformOrigin:"center center"});
     //*********** asteroidsTL init ****************
-    gsap.set(["#asteroid-1", "#asteroid-2", "#asteroid-3", "#asteroid-4", "#asteroid-5", "#asteroid-6", "#asteroid-7", "#asteroid-8", "#asteroid-9", "#asteroid-10"], {display:"none"});
+    gsap.set(["#asteroid-01", "#asteroid-02", "#asteroid-03", "#asteroid-04", "#asteroid-05", "#asteroid-06", "#asteroid-07", "#asteroid-08", "#asteroid-09", "#asteroid-10"], {display:"none"});
     //*********** asteroidDodgeTL init ****************
 
     //*********** flightTL init ****************
-gsap.set(["#symbol"], {scale:0, transformOrigin:"center center"});
+  gsap.set(["#symbol"], {scale:0, transformOrigin:"center center"});
     //*********** bigSymbolTL init ****************
+    gsap.set(["#logo"], {scale:0, transformOrigin:"center center"});
 
 
   }
@@ -99,8 +100,110 @@ gsap.set(["#symbol"], {scale:0, transformOrigin:"center center"});
         autoRotate:180
       },
       ease:"power1.out"
-    })
-    .to("#symbol", {scale:1, duration:1}, "-=1")
+    }, "asteroids")
+
+    .to("#asteroid-01", {
+      duration:5,
+      motionPath:{
+        path:"#asteroidPath-01",
+        align:"#asteroidPath-01",
+        alignOrigin:[0.5, 0.5]
+      }, 
+      display:"block", rotation:"300deg"
+    }, "asteroids -=10")
+
+    .to("#asteroid-02", {
+      duration:5,
+      motionPath:{
+        path:"#asteroidPath-02",
+        align:"#asteroidPath-02",
+        alignOrigin:[0.5, 0.5]
+      }, 
+      display:"block", rotation:"300deg"
+    }, "asteroids -=10")
+
+    .to("#asteroid-03", {
+      duration:5,
+      motionPath:{
+        path:"#asteroidPath-03",
+        align:"#asteroidPath-03",
+        alignOrigin:[0.5, 0.5]
+      }, 
+      display:"block", rotation:"300deg"
+    }, "asteroids -=10")
+
+    .to("#asteroid-04", {
+      duration:5,
+      motionPath:{
+        path:"#asteroidPath-04",
+        align:"#asteroidPath-04",
+        alignOrigin:[0.5, 0.5]
+      }, 
+      display:"block", rotation:"300deg"
+    }, "asteroids -=10")
+
+    .to("#asteroid-05", {
+      duration:5,
+      motionPath:{
+        path:"#asteroidPath-05",
+        align:"#asteroidPath-05",
+        alignOrigin:[0.5, 0.5]
+      }, 
+      display:"block", rotation:"300deg"
+    }, "asteroids -=10")
+
+    .to("#asteroid-06", {
+      duration:5,
+      motionPath:{
+        path:"#asteroidPath-06",
+        align:"#asteroidPath-06",
+        alignOrigin:[0.5, 0.5]
+      }, 
+      display:"block", rotation:"300deg"
+    }, "asteroids -=10")
+
+    .to("#asteroid-07", {
+      duration:5,
+      motionPath:{
+        path:"#asteroidPath-07",
+        align:"#asteroidPath-07",
+        alignOrigin:[0.5, 0.5]
+      }, 
+      display:"block", rotation:"300deg"
+    }, "asteroids -=10")
+
+    .to("#asteroid-08", {
+      duration:5,
+      motionPath:{
+        path:"#asteroidPath-08",
+        align:"#asteroidPath-08",
+        alignOrigin:[0.5, 0.5]
+      }, 
+      display:"block", rotation:"300deg"
+    }, "asteroids -=10")
+
+    .to("#asteroid-09", {
+      duration:5,
+      motionPath:{
+        path:"#asteroidPath-09",
+        align:"#asteroidPath-09",
+        alignOrigin:[0.5, 0.5]
+      }, 
+      display:"block", rotation:"300deg"
+    }, "asteroids -=10")
+
+    .to("#asteroid-10", {
+      duration:5,
+      motionPath:{
+        path:"#asteroidPath-10",
+        align:"#asteroidPath-10",
+        alignOrigin:[0.5, 0.5]
+      }, 
+      display:"block", rotation:"300deg"
+    }, "asteroids -=10")
+    
+    .to("#foreground", {display:"none"})
+    .to("#symbol", {scale:1, duration:1}, "-=5")
     ;
 
     return tl;
@@ -128,6 +231,10 @@ gsap.set(["#symbol"], {scale:0, transformOrigin:"center center"});
     let tl = gsap.timeline();
 
     tl.to("#symbol", {duration:5, scale:4, x:400, y:400})
+    .to("#logo", {duration:2, scale:1})
+    .to("#glow-01", {duration:.5, scale:1.05, transformOrigin:"center center"}, "-=.5")
+    .to("#glow-02", {duration:.5, scale:1.075, transformOrigin:"center center"}, "-=.25")
+    
 
     ;
 
