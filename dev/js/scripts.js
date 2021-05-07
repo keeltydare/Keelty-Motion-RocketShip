@@ -27,7 +27,7 @@ let ready = (callback) => {
 
 ready(() => {
   //add tools
-  MotionPathHelper.create("#asteroid-10");
+  //MotionPathHelper.create("#asteroid-05");
   //GSDevTools.create();
 
   /* add your code here */
@@ -112,18 +112,18 @@ ready(() => {
         alignOrigin:[0.5, 0.5]
       }, 
       display:"block", rotation:"300deg"
-    }, "asteroids -=10")
+    }, "-=13")
 
     .to("#asteroid-02", {
       duration:5,
       motionPath:{
         path:"M745.94,-33.73797 C647.702,45.23103 509.963,110.21503 247.015,419.13103 51.024,649.38403 90.357,921.90603 90.607,1048.03103" ,
         curviness:0.5,
-        offsetX:-60,
-        offsetY:-60
+        offsetX:-300,
+        offsetY:-300
       }, 
-      display:"block", rotation:"300deg"
-    }, "asteroids -=10")
+      display:"block"
+    }, "-=12")
 
     .to("#asteroid-03", {
       duration:5,
@@ -133,7 +133,7 @@ ready(() => {
         alignOrigin:[0.5, 0.5]
       }, 
       display:"block", rotation:"300deg"
-    }, "asteroids -=10")
+    }, "-=11")
 
     .to("#asteroid-04", {
       duration:5,
@@ -143,51 +143,51 @@ ready(() => {
         alignOrigin:[0.5, 0.5]
       }, 
       display:"block", rotation:"300deg"
-    }, "asteroids -=10")
+    }, "-=10")
 
     .to("#asteroid-05", {
       duration:5,
       motionPath:{
-        path:"M530.06126,-74.03582 C482.26726,59.64718 342.49226,158.48218 241.88126,210.00918 100.22026,282.55918 -37.04274,383.77418 -146.65674,496.82518 ",
+        path:"M492.44826,-23.92182 C407.61626,128.36518 376.59226,119.76118 215.48626,228.76118 158.96426,267.00218 59.39626,313.05318 -47.70774,450.08418 ",
         curviness:0.5,
-        offsetX:-60,
-        offsetY:-60
+        offsetX:-200,
+        offsetY:-200
       }, 
-      display:"block", rotation:"300deg"
-    }, "asteroids -=10")
+      display:"block"
+    }, "-=9")
 
     .to("#asteroid-06", {
       duration:5,
       motionPath:{
-        path:"#M-84.35674,213.17518 C16.44326,191.85218 88.29926,173.69518 151.18626,119.79218 209.72926,69.60618 265.12126,1.69718 304.80226,-73.04982 ",
+        path:"#M275.54777,-25.5099 C275.54777,5.4891 231.06577,56.2651 160.28777,108.9441 99.31177,154.3271 41.06977,196.0841 -38.33423,204.1851 ",
         curviness:0.5,
-        offsetX:-60,
-        offsetY:-60
+        offsetX:-200,
+        offsetY:-200
       }, 
       display:"block", rotation:"300deg"
-    }, "asteroids -=10")
+    }, "-=8")
 
     .to("#asteroid-07", {
       duration:5,
       motionPath:{
-        path:"M-63.9565,764.91803 C74.6325,598.12503 295.9585,443.55103 427.2025,339.15403 564.9265,229.59903 831.2415,37.20103 916.6355,-44.97397 ",
+        path:"M887.32797,-17.642 C749.50697,113.239 557.76697,249.207 419.97897,349.095 354.85697,396.304 34.75797,640.339 -124.71703,796.675 ",
         curviness:0.5,
-        offsetX:-60,
-        offsetY:-60
+        offsetX:-100,
+        offsetY:-100
       }, 
       display:"block", rotation:"300deg"
-    }, "asteroids -=10")
+    }, "-=7")
 
     .to("#asteroid-08", {
       duration:5,
       motionPath:{
-        path:"M-28.56503,763.263 C-28.56503,794.244 386.56097,751.693 525.03297,420.888 662.61697,92.202 1132.82297,-18.705 1163.84097,-18.705 ",
+        path:"M1108.66701,-35.685 C992.76601,29.727 646.07201,194.142 513.35001,432.204 308.78101,799.135 199.40801,710.485 -86.48299,798.378 ",
         curviness:0.5,
         offsetX:-60,
         offsetY:-60
       }, 
       display:"block", rotation:"300deg"
-    }, "asteroids -=10")
+    }, "-=6")
 
     .to("#asteroid-09", {
       duration:5,
@@ -197,21 +197,21 @@ ready(() => {
         alignOrigin:[0.5, 0.5]
       }, 
       display:"block", rotation:"300deg"
-    }, "asteroids -=10")
+    }, "-=5")
 
     .to("#asteroid-10", {
       duration:5,
       motionPath:{
-        path:"M-52.10579,550.6049 C261.68821,407.6259 274.02521,332.9169 365.04521,273.6379 601.40421,119.7009 606.68121,117.7959 719.19521,-15.9291 ",
+        path:"M755.48721,-17.4731 C755.48721,13.5199 501.99721,184.4559 387.72121,257.0249 155.55521,404.4449 210.73321,427.6919 -38.77979,537.3459 ",
         curviness:0.5,
         offsetX:-60,
         offsetY:-60
       }, 
       display:"block", rotation:"300deg"
-    }, "asteroids -=10")
-    
+    }, "-=4")
+    .to("#symbol", {scale:1, duration:1}, "asteroids -=1")
     .to("#foreground", {display:"none"})
-    .to("#symbol", {scale:1, duration:1}, "-=5")
+    
     ;
 
     return tl;
