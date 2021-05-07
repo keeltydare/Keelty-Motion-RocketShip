@@ -2,9 +2,10 @@
 import { gsap } from "gsap";
 import { GSDevTools } from "gsap/GSDevTools";
 import {MotionPathPlugin} from "gsap/MotionPathPlugin";
+import {MotionPathHelper} from "gsap/MotionPathHelper";
 
 //register Plugins
-gsap.registerPlugin(GSDevTools, MotionPathPlugin);
+gsap.registerPlugin(GSDevTools, MotionPathPlugin, MotionPathHelper);
 
 //**** SELECT ELEMENTS without jQuery ****\\
 
@@ -26,6 +27,7 @@ let ready = (callback) => {
 
 ready(() => {
   //add tools
+  MotionPathHelper.create("#asteroid-10");
   //GSDevTools.create();
 
   /* add your code here */
@@ -115,9 +117,10 @@ ready(() => {
     .to("#asteroid-02", {
       duration:5,
       motionPath:{
-        path:"#asteroidPath-02",
-        align:"#asteroidPath-02",
-        alignOrigin:[0.5, 0.5]
+        path:"M745.94,-33.73797 C647.702,45.23103 509.963,110.21503 247.015,419.13103 51.024,649.38403 90.357,921.90603 90.607,1048.03103" ,
+        curviness:0.5,
+        offsetX:-60,
+        offsetY:-60
       }, 
       display:"block", rotation:"300deg"
     }, "asteroids -=10")
@@ -145,9 +148,10 @@ ready(() => {
     .to("#asteroid-05", {
       duration:5,
       motionPath:{
-        path:"#asteroidPath-05",
-        align:"#asteroidPath-05",
-        alignOrigin:[0.5, 0.5]
+        path:"M530.06126,-74.03582 C482.26726,59.64718 342.49226,158.48218 241.88126,210.00918 100.22026,282.55918 -37.04274,383.77418 -146.65674,496.82518 ",
+        curviness:0.5,
+        offsetX:-60,
+        offsetY:-60
       }, 
       display:"block", rotation:"300deg"
     }, "asteroids -=10")
@@ -155,9 +159,10 @@ ready(() => {
     .to("#asteroid-06", {
       duration:5,
       motionPath:{
-        path:"#asteroidPath-06",
-        align:"#asteroidPath-06",
-        alignOrigin:[0.5, 0.5]
+        path:"#M-84.35674,213.17518 C16.44326,191.85218 88.29926,173.69518 151.18626,119.79218 209.72926,69.60618 265.12126,1.69718 304.80226,-73.04982 ",
+        curviness:0.5,
+        offsetX:-60,
+        offsetY:-60
       }, 
       display:"block", rotation:"300deg"
     }, "asteroids -=10")
@@ -165,9 +170,10 @@ ready(() => {
     .to("#asteroid-07", {
       duration:5,
       motionPath:{
-        path:"#asteroidPath-07",
-        align:"#asteroidPath-07",
-        alignOrigin:[0.5, 0.5]
+        path:"M-63.9565,764.91803 C74.6325,598.12503 295.9585,443.55103 427.2025,339.15403 564.9265,229.59903 831.2415,37.20103 916.6355,-44.97397 ",
+        curviness:0.5,
+        offsetX:-60,
+        offsetY:-60
       }, 
       display:"block", rotation:"300deg"
     }, "asteroids -=10")
@@ -175,9 +181,10 @@ ready(() => {
     .to("#asteroid-08", {
       duration:5,
       motionPath:{
-        path:"#asteroidPath-08",
-        align:"#asteroidPath-08",
-        alignOrigin:[0.5, 0.5]
+        path:"M-28.56503,763.263 C-28.56503,794.244 386.56097,751.693 525.03297,420.888 662.61697,92.202 1132.82297,-18.705 1163.84097,-18.705 ",
+        curviness:0.5,
+        offsetX:-60,
+        offsetY:-60
       }, 
       display:"block", rotation:"300deg"
     }, "asteroids -=10")
@@ -195,9 +202,10 @@ ready(() => {
     .to("#asteroid-10", {
       duration:5,
       motionPath:{
-        path:"#asteroidPath-10",
-        align:"#asteroidPath-10",
-        alignOrigin:[0.5, 0.5]
+        path:"M-52.10579,550.6049 C261.68821,407.6259 274.02521,332.9169 365.04521,273.6379 601.40421,119.7009 606.68121,117.7959 719.19521,-15.9291 ",
+        curviness:0.5,
+        offsetX:-60,
+        offsetY:-60
       }, 
       display:"block", rotation:"300deg"
     }, "asteroids -=10")
@@ -208,7 +216,7 @@ ready(() => {
 
     return tl;
   }
-  //*********** flightTL ****************
+  //*********** flightTL ****************      
   function flightTL(){
     let tl = gsap.timeline();
     tl.to("#serenity", {
