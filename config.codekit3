@@ -120,17 +120,6 @@
 		"oAP": "/deploy/index.html",
 		"oF": 2
 		},
-	"/dev/js/scripts.js": {
-		"bF": 4,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/deploy/js/scripts-min.js",
-		"oF": 2,
-		"sC": 3,
-		"tS": 0
-		},
 	"/dev/scss/base/_base.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -379,7 +368,8 @@
 	"displayValue": "Keelty-Motion-RocketShip",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ron",
-	"iconImageWasSetByUser": 1
+	"iconImageWasSetByUser": 1,
+	"lastBuiltDate": 642099471.58152997
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

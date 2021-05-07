@@ -1,11 +1,11 @@
 //IMPORTS
 import { gsap } from "gsap";
-import { GSDevTools } from "gsap/GSDevTools";
+//import { GSDevTools } from "gsap/GSDevTools";
 import {MotionPathPlugin} from "gsap/MotionPathPlugin";
 import {MotionPathHelper} from "gsap/MotionPathHelper";
 
 //register Plugins
-gsap.registerPlugin(GSDevTools, MotionPathPlugin, MotionPathHelper);
+gsap.registerPlugin( MotionPathPlugin, MotionPathHelper);
 
 //**** SELECT ELEMENTS without jQuery ****\\
 
@@ -110,18 +110,18 @@ ready(() => {
         path:"#asteroidPath-01",
         align:"#asteroidPath-01",
         alignOrigin:[0.5, 0.5]
-      }, 
+      },
       display:"block", rotation:"300deg"
     }, "-=13")
 
     .to("#asteroid-02", {
       duration:5,
       motionPath:{
-        path:"M745.94,-33.73797 C647.702,45.23103 509.963,110.21503 247.015,419.13103 51.024,649.38403 90.357,921.90603 90.607,1048.03103" ,
+        path:"M745.94,-33.73797 C647.702,45.23103 509.963,110.21503 247.015,419.13103 51.024,649.38403 90.357,921.90603 90.607,1100" ,
         curviness:0.5,
-        offsetX:-300,
-        offsetY:-300
-      }, 
+        offsetX:-60,
+        offsetY:-60
+      },
       display:"block"
     }, "-=12")
 
@@ -131,7 +131,7 @@ ready(() => {
         path:"#asteroidPath-03",
         align:"#asteroidPath-03",
         alignOrigin:[0.5, 0.5]
-      }, 
+      },
       display:"block", rotation:"300deg"
     }, "-=11")
 
@@ -141,7 +141,7 @@ ready(() => {
         path:"#asteroidPath-04",
         align:"#asteroidPath-04",
         alignOrigin:[0.5, 0.5]
-      }, 
+      },
       display:"block", rotation:"300deg"
     }, "-=10")
 
@@ -152,7 +152,7 @@ ready(() => {
         curviness:0.5,
         offsetX:-200,
         offsetY:-200
-      }, 
+      },
       display:"block"
     }, "-=9")
 
@@ -163,7 +163,7 @@ ready(() => {
         curviness:0.5,
         offsetX:-200,
         offsetY:-200
-      }, 
+      },
       display:"block", rotation:"300deg"
     }, "-=8")
 
@@ -174,7 +174,7 @@ ready(() => {
         curviness:0.5,
         offsetX:-100,
         offsetY:-100
-      }, 
+      },
       display:"block", rotation:"300deg"
     }, "-=7")
 
@@ -185,7 +185,7 @@ ready(() => {
         curviness:0.5,
         offsetX:-60,
         offsetY:-60
-      }, 
+      },
       display:"block", rotation:"300deg"
     }, "-=6")
 
@@ -195,7 +195,7 @@ ready(() => {
         path:"#asteroidPath-09",
         align:"#asteroidPath-09",
         alignOrigin:[0.5, 0.5]
-      }, 
+      },
       display:"block", rotation:"300deg"
     }, "-=5")
 
@@ -206,17 +206,17 @@ ready(() => {
         curviness:0.5,
         offsetX:-60,
         offsetY:-60
-      }, 
+      },
       display:"block", rotation:"300deg"
     }, "-=4")
-    .to("#symbol", {scale:1, duration:1}, "asteroids -=1")
-    .to("#foreground", {display:"none"})
-    
+    .to("#symbol", {scale:1, duration:1}, "asteroids+=5")
+  //  .to("#foreground", {display:"none"})
+
     ;
 
     return tl;
   }
-  //*********** flightTL ****************      
+  //*********** flightTL ****************
   function flightTL(){
     let tl = gsap.timeline();
     tl.to("#serenity", {
@@ -242,7 +242,7 @@ ready(() => {
     .to("#logo", {duration:2, scale:1})
     .to("#glow-01", {duration:.5, scale:1.05, transformOrigin:"center center"}, "-=.5")
     .to("#glow-02", {duration:.5, scale:1.075, transformOrigin:"center center"}, "-=.25")
-    
+
 
     ;
 
@@ -251,12 +251,12 @@ ready(() => {
 
   //*********** flame functions DO NOT INCLUDE IN MAIN TL ****************
   function light(){
-  
+
     console.log('SHOW TIME');
     gsap.set("#light",{display:"block", scale:.75, alpha:.25, transformOrigin:"center center"});
-  
+
     lightTL.to("#light",{duration:1, scale:1, aplha:1, yoyo:true, repeat:-1, ease:"back.out"});
-    
+
     lightTL.play()
   }
 
