@@ -103,7 +103,7 @@ ready(() => {
         alignOrigin:[0.5, 0.5]
       },
       rotation:"300deg"
-    }, "asteroids+=1")
+    }, "asteroids+=5")
 
     .to("#asteroid-02", {
       duration:5,
@@ -113,7 +113,7 @@ ready(() => {
         offsetX:-60,
         offsetY:-60
       }
-    }, "asteroids+=2")
+    }, "asteroids+=4")
 
     .to("#asteroid-03", {
       duration:5,
@@ -135,7 +135,7 @@ ready(() => {
         offsetY:-60
       },
       rotation:"300deg"
-    }, "asteroids+=4")
+    }, "asteroids+=2")
 
     .to("#asteroid-05", {
       duration:5,
@@ -145,7 +145,7 @@ ready(() => {
         offsetX:-200,
         offsetY:-200
       }
-    }, "asteroids+=5")
+    }, "asteroids+=1")
 
     .to("#asteroid-06", {
       duration:5,
